@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        .declare {
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .web {
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        label {
+            display: inline-block;
+            width: 290px;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 550px;
+            background-color: pink;
+        }
+
+        #password-strength {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        #password-mismatch {
+            color: red;
+            font-weight: bold;
+        }
+        .feedback {
+            font-weight: bold;
+        }
+
+        .feedback.poor {
+            color: red;
+        }
+
+        .feedback.good {
+            color: orange;
+        }
+
+        .feedback.excellent {
+            color: green;
+        }
+        .submit-button{
+            font-size: 20px;
+            margin-top: 20px;
+            background-color: red;
+            color: white; 
+            text-decoration: underline;
+            border-radius: 8cm;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h1>Registration form</h1>
+    <form>
+        <label for="fn">First Name</label>
+        <input type="text" name="fn" id="fn" required>
+        <span class="feedback" id="fn-feedback"></span><br>
+        <label for="ln">Last Name</label>
+        <input type="text" name="ln" id="ln" required>
+        <span class="feedback" id="ln-feedback"></span><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <span class="feedback" id="email-feedback"></span><br>
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="password" required>
+        <span id="password-strength"></span><br>
+        <label for="repass">Re-enter Password</label>
+        <input type="password" name="repass" id="repassword" required>
+        <span id="password-mismatch"></span><br>
+        <label for="gender">Gender</label>
+        <div>
+            <input type="radio" name="male">
+            <label for="male">Male</label><br>
+            <input type="radio" name="female">
+            <label for="female">Female</label>
+        </div><br>
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age">
+        <span class="feedback" id="age-feedback"></span><br>
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone">
+        <span class="feedback" id="phone-feedback"></span><br>
+        <label for="address">Address</label>
+        <textarea name="address" id="address"></textarea>
+        <span class="feedback" id="addess-feedback"></span><br>
+        <label for="state">State</label>
+        <input type="text" name="state" id="state">
+        <span class="feedback" id="state-feedback"></span><br>
+        <label for="country">Country</label>
+        <select>
+            <option>Choose your country</option>
+            <option>India</option>
+            <option>UK</option>
+            <option>USA</option>
+            <option>Sri Lanka</option>
+        </select><br>
+        <label for="lang">Language</label>
+        <div>
+            <input type="checkbox" name="english">
+            <label for="english">English</label><br>
+            <input type="checkbox" name="kannada">
+            <label for="kannada">Kannada</label><br>
+            <input type="checkbox" name="hindi">
+            <label for="hindi">Hindi</label><br>
+            <input type="checkbox" name="telugu">
+            <label for="telugu">Telugu</label>
+        </div><br>
+        <div class="declare">
+            <input type="checkbox">
+            <label>Hereby I declare all the given details are true</label>
+        </div>
+        <div class="web">
+            <p>Log in to <a href="#">Ethnus</a> website</p>
+        </div>
+        <input type="submit" class="submit-button" value="Register">
+    </form>
+</div>
+<script>
+    const passwordInput = document.getElementById('password');
+    const repasswordInput = document.getElementById('repassword');
+    const passwordStrength = document.getElementById('password-strength');
+    const passwordMismatch = document.getElementById('password-mismatch');
+
+    passwordInput.addEventListener('input', () => {
+        const password = passwordInput.value;
+        if (password.length < 6) {
+            passwordStrength.textContent = 'Poor';
+            passwordStrength.style.color = 'red';
+        } else if (password.length < 10) {
+            passwordStrength.textContent = 'Good';
+            passwordStrength.style.color = 'orange';
+        } else {
+            passwordStrength.textContent = 'Excellent';
+            passwordStrength.style.color = 'green';
+        }
+    });
+
+    repasswordInput.addEventListener('input', () => {
+        const password = passwordInput.value;
+        const repassword = repasswordInput.value;
+        if (password !== repassword) {
+            passwordMismatch.textContent = 'Password mismatch';
+        } else {
+            passwordMismatch.textContent = '';
+        }
+    });
+    function provideFeedback(inputId, feedbackId) {
+        const input = document.getElementById(inputId);
+        const feedback = document.getElementById(feedbackId);
+
+        input.addEventListener('input', () => {
+            const inputValue = input.value.trim();
+            if (inputValue === '') {
+                feedback.textContent = '';
+            } else if (inputValue.length < 3) {
+                feedback.textContent = 'Poor';
+                feedback.classList = 'feedback poor';
+            } else if (inputValue.length < 6) {
+                feedback.textContent = 'Good';
+                feedback.classList = 'feedback good';
+            } else {
+                feedback.textContent = 'Excellent';
+                feedback.classList = 'feedback excellent';
+            }
+        });
+    }
+
+    provideFeedback('fn', 'fn-feedback');
+    provideFeedback('ln', 'ln-feedback');
+    provideFeedback('email', 'email-feedback');
+    provideFeedback('age', 'age-feedback');
+    provideFeedback('phone', 'phone-feedback');
+    provideFeedback('address', 'address-feedback');
+    provideFeedback('state', 'state-feedback');
+
+</script>
+</body>
+</html>

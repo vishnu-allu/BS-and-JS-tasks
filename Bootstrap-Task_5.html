@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Form Validation</title>
+    <!-- Include Bootstrap CSS (optional) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Style invalid input fields */
+        .is-invalid {
+            border-color: #dc3545;
+        }
+
+        /* Style invalid feedback messages */
+        .invalid-feedback {
+            color: #dc3545; /* Red text color */
+            display: block;
+        }
+
+        /* Change the Bootstrap validation symbol */
+        .form-control:invalid::after {
+            content: "\2716"; /* Change this to your desired symbol */
+            color: #dc3545; /* Red color for the symbol */
+        }
+
+        /* Change the Bootstrap validation symbol for text areas */
+        .custom-input:invalid::before {
+            content: "\2716"; /* Change this to your desired symbol */
+            color: #dc3545; /* Red color for the symbol */
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.375rem;
+            pointer-events: none;
+        }
+        .custom-input:invalid {
+            border-color: #dc3545; /* Red border color for invalid text areas */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="myForm">
+            <div class="mb-3 row">
+                <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-text">&#128100;</span>
+                        <input type="text" class="form-control custom-input is-invalid" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please supply your first name.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-text">&#128100;</span>
+                        <input type="text" class="form-control is-invalid" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please supply your last name.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-text">&#128231;</span>
+                        <input type="email" class="form-control is-invalid" id="email" name="email" required>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please supply a valid email address.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-text">&#9742;</span>
+                        <input type="tel" class="form-control is-invalid" id="phone" name="phone" required>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please supply a valid phone number.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="address" class="col-sm-2 col-form-label">Address</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-text">&#127968;</span>
+                        <input class="form-control is-invalid" id="address" name="address" required></input>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please supply your address.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="city" class="col-sm-2 col-form-label">City</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-text">&#127969;</span>
+                        <input type="text" class="form-control is-invalid" id="city" name="city" required>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please supply your city.
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="state" class="col-sm-2 col-form-label">State</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <span class"input-group-text">&#127973;</span>
+                        <select class="form-select">
+                            <option>Andhra Pradesh</option>
+                            <option>Tamil Nadu</option>
+                            <option>Karnataka</option>
+                            <option>Madya Pradesh</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="city" class="col-sm-2 col-form-label">Do you have hosting?</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="radio1" value="option1" checked>
+                            <label class="form-check-label" for="radio3">Yes</label>
+                            <br>
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="radio2" value="option2">
+                            <label class="form-check-label" for="radio3">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="city" class="col-sm-2 col-form-label">Project Description</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-text">&#x270E;</span>
+                        <textarea class="form-control custom-textarea is-invalid" id="Description" name="Description" required></textarea>   
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-warning" style="font-size: 24px;">Send &#x1F4E9;</button>
+            </div>
+        </form>
+    </div>
+    <!-- Include Bootstrap JavaScript (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

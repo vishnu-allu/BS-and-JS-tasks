@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Design Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .material-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            max-width: 250px;
+            max-height: 700px;
+        }
+        .card-image {
+            width: 100%;
+            height: auto;
+            opacity: 0.75;
+        }
+        .material-card:hover {
+            transform: translateY(-5px);
+        }
+        .card-title {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+        }
+        .card-text {
+            font-size: 16px;
+            color: #888;
+            padding: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: orange;
+        }
+        .custom-link{
+            margin-left: 20px;
+        }
+        .card-body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="material-card">
+                    <div class="card-body">
+                        <img src="C:/Users/Mohith/Downloads/cotton.jpg" alt="Card Image" class="card-image">
+                        <h5 class="card-title">MATERIAL CARDS</h5>
+                        <p class="card-text">Cards for display in <br> portifolio style <br> material design by <br> Google.</p>
+                        <hr>
+                        <a href="#">LINK</a>
+                        <a class="custom-link" href="#">LINK</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="material-card">
+                    <div class="card-body">
+                        <img src="C:/Users/Mohith/Downloads/blue.jpeg" alt="Card Image" class="card-image">
+                        <h5 class="card-title">MATERIAL CARDS</h5>
+                        <p class="card-text">Cards for display in <br> portifolio style <br> material design by <br> Google.</p>
+                        <hr>
+                        <a href="#">LINK</a>
+                        <a class="custom-link" href="#">LINK</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="material-card">
+                    <div class="card-body">
+                        <img src="C:/Users/Mohith/Downloads/blue.jpeg" alt="Card Image" class="card-image">
+                        <h5 class="card-title">MATERIAL CARDS</h5>
+                        <p class="card-text">Cards for display in <br> portifolio style <br> material design by <br> Google.</p>
+                        <hr>
+                        <a href="#">LINK</a>
+                        <a class="custom-link" href="#">LINK</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="material-card">
+                    <div class="card-body">
+                        <img src="C:/Users/Mohith/Downloads/blue.jpeg" alt="Card Image" class="card-image">
+                        <h5 class="card-title">MATERIAL CARDS</h5>
+                        <p class="card-text">Cards for display in <br> portifolio style <br> material design by <br> Google.</p>
+                        <hr>
+                        <a href="#">LINK</a>
+                        <a class="custom-link" href="#">LINK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

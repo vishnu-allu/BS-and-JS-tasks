@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Animation Control</title>
+</head>
+<body>
+    <img src=""C:\Users\vishn\Downloads\train.jpeg"" style="width: 500px;height: 500px; position: relative; left: -500px;" id="animatedImage" alt="Animated Image">
+    <br>
+    <button id="startButton">Start Animation</button>
+    <button id="stopButton">Stop Animation</button>
+    <script>
+        const animatedImage = document.getElementById("animatedImage");
+        const startButton = document.getElementById("startButton");
+        const stopButton = document.getElementById("stopButton");
+        let animationInterval;
+        let position = -500;
+        function startAnimation() {
+            animationInterval = setInterval(() => {
+                position += 10;
+                animatedImage.style.left = position + "px";
+                if (position >= 800) {
+                    clearInterval(animationInterval);
+                }
+            }, 100);
+        }
+        function stopAnimation() {
+            clearInterval(animationInterval);
+        }
+        startButton.addEventListener("click", startAnimation);
+        stopButton.addEventListener("click", stopAnimation);
+    </script>
+</body>
+</html>

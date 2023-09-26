@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script>
+        function reverseNumber(x) {
+            let numStr = x.toString();
+            let reversedStr = numStr.split('').reverse().join('');
+            let reversedNum = parseInt(reversedStr, 10);
+            return reversedNum;
+        }
+        let x = 32243;
+        let reversed = reverseNumber(x);
+        document.write("Orginal Number: "+x+'<br>');
+        document.write("Reversed Number: "+reversed);
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <style>
+          .size{
+            font-size: 12px;
+            display: inline-flex;
+            align-items: center;
+          }
+          .icon{
+            margin-right: 10px;
+          }
+          .custom-container {
+            max-width: 95%;
+          }
+          .custom-height {
+              height: 50px;
+              text-align: center;
+            }
+          a{
+            text-decoration: none;
+            color:white ;
+          }
+          .size1{
+            padding-left: 125px;
+          }
+          .square-box {
+            margin-top: 5px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid white;
+            color: white;
+          }
+          .square-box1 {
+            margin-top: 5px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid white;
+            color: white;
+          }
+          .square-box p {
+            margin: 0;
+          }
+          .custom-height1{
+            height: 500px;
+          }
+          img{
+            height: 100%;
+            width: 100%;
+            opacity: 0.8;
+          }
+          .image-text {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+          }
+          .image-text1 {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 35px;
+            font-weight: bolder;
+          }
+          .image-text2 {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+          }
+          .custom-height2{
+            height: 130px;
+            text-align: center;
+          }
+          .size2{
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+          }
+          .size3{
+            margin-top: 3%;
+            font-size: 20px;
+          }
+          .icon1{
+            margin-top: 4%;
+          }
+        </style>
+  </head>
+  <body>
+    
+    <div class="container custom-container">
+      <div class="row bg-warning">
+        <div class="col-4 size1">
+          <p class="h2 fw-bolder">Builderz</p>        
+        </div>
+        <div class="col-2"></div>
+        <div class="col-2">
+          <i class="fa-regular fa-calendar fa-xl icon"></i>
+          <p class="size">Opening Hour<br>Mon-Fri, 8:00 - 9:00</p>
+        </div>    
+        <div class="col-2">     
+          <p class="size"><i class="fa-regular fa-address-book fa-2xl icon"></i> Call Us<br>+012 345 6789</p>
+        </div>
+        <div class="col-2">     
+          <p class="size"><i class="fa-solid fa-envelope fa-xl icon"></i> Email Us<br>info@example.com</p>
+        </div>
+      </div>
+      <div class="row bg-warning">
+        <div class="col-1 custom-height"><p></p></div>
+        <div class="col-1 bg-dark custom-height"><a href="#">HOME</a></div>
+        <div class="col-1 bg-dark custom-height"><a href="#">ABOUT</a></div>
+        <div class="col-1 bg-dark custom-height"><a href="#">SERVICE</a></div>
+        <div class="col-1 bg-dark custom-height"><a href="#">TEAM</a></div>
+        <div class="col-1 bg-dark custom-height"><a href="#">PROJECT</a></div>
+        <div class="col-1 bg-dark custom-height"><a href="#">PAGES</a></div>
+        <div class="col-1 bg-dark custom-height"><a href="#">CONTACT</a></div>
+        <div class="col-1 bg-dark custom-height"><p></p></div>
+        <div class="col-2 bg-dark custom-height">
+          <div class="square-box"<a href="#">Get A Quote</a></div>
+        </div>
+        <div class="col-1 custom-height"><p></p></div>
+      </div>
+        <div class="row">
+          <div class="col custom-height1">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="C:/Users/Mohith/Downloads/construction.jpg" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="C:/Users/Mohith/Downloads/construction2.jpg" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="C:/Users/Mohith/Downloads/construction3.jpg" alt="Image 3">
+                </div>
+              </div>
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+              <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+              <div class="image-text">We Are Professional</div>
+              <div class="image-text1">For Your Dream Project</div>
+              <div class="square-box1 image-text2">
+                <a href="#">Get A Quote</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4 bg-dark custom-height2">
+            <div>
+              <i class="fa-solid fa-user-nurse fa-2xl text-warning icon1"></i>
+              <p class="text-warning size3"><b>Expert Worker</b></p>
+              <p class="text-warning size2">Lorem ipsum dolor sit amet elit. Phasus nec pretim ornamre velit non</p>
+            </div>
+          </div>
+          <div class="col-4 bg-warning custom-height2">
+            <div>
+              <i class="fa-solid fa-building fa-2xl text-dark icon1"></i>
+              <p class="text-dark size3"><b>Quality Work</b></p>
+              <p class="text-dark size2">Lorem ipsum dolor sit amet elit. Phasus nec pretim ornamre velit non</p>
+            </div>
+          </div>
+          <div class="col-4 bg-dark custom-height2">
+            <div>
+              <i class="fa-solid fa-phone fa-2xl text-warning icon1"></i>
+              <p class="text-warning size3"><b>24/7 Support</b></p>
+              <p class="text-warning size2">Lorem ipsum dolor sit amet elit. Phasus nec pretim ornamre velit non</p>
+            </div>
+          </div>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

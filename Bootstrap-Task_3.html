@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+        .square-box {
+            margin-top: 5px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(10, 176, 236);   
+        }
+        .custom-margin{
+            margin-top: 5px;
+        }
+        .custom-margin1{
+            margin-top: 50px;
+        }
+        .custom-margin2{
+            margin-left: 15px;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(10, 176, 236);
+        }
+        .styled-row {
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .pricing-box {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .pricing-title {
+            font-size: 24px;
+            background-color: #888;
+            padding-bottom: 5px;
+        }
+        .pricing-amount {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .pricing-features {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .pricing-features li {
+            margin: 10px 0;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+        .btn-primary1 {
+            background-color: white;
+            color: blue;
+            border-color: blue;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+        .font{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .styled-list{
+            list-style-type: none;
+        }
+        .custom-width{
+            max-width: 350px;
+        }
+        .pricing-divider {
+            border-top: 1px solid #ccc;
+            margin: 15px 0;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="row styled-row">
+            <div class="col-7 custom-margin"><p class="h6">Company name</p></div>
+            <div class="col-1 custom-margin"><p>Features</p></div>
+            <div class="col-1 custom-margin"><p>Enterprise</p></div>
+            <div class="col-1 custom-margin"><p>Support</p></div>
+            <div class="col-1 custom-margin"><p>Pricing</p></div>
+            <div class="col-1">
+                <div class="square-box"><a href="#">Sign up</a></div>
+            </div>
+        </div>
+        <p class="h1 text-center custom-margin1">Pricing</p><br>
+        <p class="text-center">Quickly build an effective pricing table for your potential customers with this<br>Bootstrap example. It's built with default Bootstrap components and utilities<br> with little customization.</p>
+        <div class="row">
+            <div class="col-md-4 mb-4 ">
+                <div class="pricing-box">
+                    <div class="pricing-title">Free</div>
+                    <hr class="pricing-divider">
+                    <div class="pricing-amount">$0/mo</div>
+                    <ul class="pricing-features">
+                        <li>10 users included</li>
+                        <li>2 GB of storage</li>
+                        <li>Email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button class="btn btn-primary1">Sign up for free</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-box">
+                    <div class="pricing-title">Pro</div>
+                    <hr class="pricing-divider">
+                    <div class="pricing-amount">$15/mo</div>
+                    <ul class="pricing-features">
+                        <li>20 users included</li>
+                        <li>10 GB of storage</li>
+                        <li>Priority email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 ">
+                <div class="pricing-box">
+                    <div class="pricing-title">Enterprise</div>
+                    <hr class="pricing-divider">
+                    <div class="pricing-amount">$29/mo</div>
+                    <ul class="pricing-features">
+                        <li>30 users included</li>
+                        <li>15 GB of storage</li>
+                        <li>Phone and email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button class="btn btn-primary">Contact us</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <div class="row">
+            <div class="col-3 custom-margin2 custom-width">
+                <i class="fa-brands fa-bootstrap fa-xl"></i>
+                <p><i class="fa-regular fa-copyright"></i>2017</p>
+            </div>
+            <div class="col-3 custom-width">
+                <ul class="styled-list">
+                    <li class="font">Features</li>
+                    <li>Cool stuff</li>
+                    <li>Random feature</li>
+                    <li>Team feature</li>
+                </ul>
+            </div>
+            <div class="col-3 custom-width">
+                <ul class="styled-list">
+                    <li class="font">Resources</li>
+                    <li>Resource</li>
+                    <li>Resource name</li>
+                    <li>Another resource</li>
+                </ul>
+            </div>
+            <div class="col-3 custom-width">
+                <ul class="styled-list">
+                    <li class="font">About</li>
+                    <li>Team</li>
+                    <li>Locations</li>
+                    <li>Privacy</li>
+                </ul>
+            </div>
+        </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
